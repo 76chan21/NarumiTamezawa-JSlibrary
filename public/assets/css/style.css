@@ -1,0 +1,225 @@
+html,
+body {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    overflow-x: hidden;
+    width: 100vw;
+    color: rgb(29, 29, 29);
+    background-color: #faf6f3;
+}
+
+
+/* Header */
+header {
+    background-color: #faf6f3;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0px 2px 2px #90909032);
+    position: fixed;
+    z-index: 95;
+}
+
+.inner {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.close-icon {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    transform: translateX(200%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: #faf9f3;
+    list-style: none;
+    padding-top: 4rem;
+    padding-left: 20px;
+    width: 50%;
+    height: 100vh;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu-item {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: rgb(29, 29, 29);
+}
+
+.show-menu {
+    transform: translateX(100%);
+}
+
+
+/* Quick Search */
+#quick-search {
+    background-color: #faf6f3;
+    padding: 16px 12px;
+    filter: drop-shadow(0px 2px 2px #90909032);
+    position: relative;
+    z-index: 90;
+    margin-top: 70px;
+}
+
+input {
+    height: 24px;
+    width: 34%;
+    border-radius: 5px;
+    border: solid 1px rgb(123, 123, 123);
+    margin-right: 6px;
+    padding-left: 6px;
+}
+
+h2 {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+h3 {
+    display: inline;
+    margin-right: 12px;
+}
+
+#quick-search>div {
+    margin-bottom: 12px;
+}
+
+#destination {
+    width: 65%;
+}
+
+#search {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 153, 0);
+    color: #faf6f3;
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 6px;
+}
+
+
+/* Hero */
+#hero {
+    height: 240px;
+    width: 100vw;
+    background-image: url(../image/yellow-bg.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#lagguage {
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/lagguage.png);
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-100%);
+    position: absolute;
+}
+
+h1 {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+#hero>div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 12px;
+}
+
+.sec-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Popular destination */
+#popular {
+    margin-top: 20px;
+}
+
+/* #popular>div {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.image-card {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    margin-bottom: 12px;
+}
+
+#toronto {
+    background-image: url(../image/toronto-skyline-from-park.jpg);
+}
+
+
+#vancouver {
+    background-image: url(../image/vancouver-city-skyline-waterfront-with-bench-park.jpg);
+}
+
+#tokyo {
+    background-image: url(../image/traffic-tokyo-tower-night-tokyo-japan.jpg);
+}
+
+#korea {
+    background-image: url(../image/gyeongbokgung-palace-with-cherry-blossom-spring-seoul-korea.jpg);
+}
+
+#germany {
+    background-image: url(../image/neuschwanstein-castle-germany.jpg);
+}
+
+#hawaii {
+    background-image: url(../image/AdobeStock_29497479.jpeg);
+}
+
+#map-sec {
+    width: 100%;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    /* または absolute/fixed なら z-index 調整 */
+    z-index: 0;
+}
