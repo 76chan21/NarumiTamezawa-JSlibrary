@@ -15,6 +15,7 @@
   "dependencies": {
     "animejs": "^3.2.2",
     "aos": "^2.3.4",
-    "cleave.js": "^1.6.0"
+    "cleave.js": "^1.6.0",
+    "lightbox2": "^2.11.5"
   }
 }

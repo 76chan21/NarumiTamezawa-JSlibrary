@@ -21,8 +21,11 @@ hamburger.addEventListener("click", toggleMenu);
 closeIcon.style.display = "none";
 menuIcon.style.display = "block";
 
+
+// search bar
+
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".start-date").forEach((input) => {
+    document.querySelectorAll(".date").forEach((input) => {
         new Cleave(input, {
             date: true,
             datePattern: ['m', 'd', 'Y']
@@ -31,14 +34,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     anime({
-//         targets: '#lagguage',
-//         translateY: 0,
-//         duration: 3000,
-//         easing: 'easeInOutExpo'
-//     });
-// });
+// Hero animation
+window.onload = function () {
+    anime({
+        targets: '#luggage',
+        translateX: [50, 0],
+        opacity: [0, 1],
+        duration: 3000,
+        easing: 'easeOutExpo',
+        begin: function () {
+            console.log("Animation started!");
+        },
+        complete: function () {
+            console.log("Animation completed!");
+        }
+    });
+    anime({
+        targets: '.animated-word',
+        opacity: [0, 1],
+        duration: 2000,
+        delay: 1000,
+        easing: 'easeOutExpo',
+    });
+};
 
 
 // card animation
@@ -54,3 +72,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 var marker = L.marker([43.6426, -79.3871]).addTo(map); // Pin at CN tower
+
+const cards = document.querySelectorAll('.image-card');
+
+cards.forEach(card => {
+    const hoverElement = card.querySelector('.card-hover');
+
+    card.addEventListener('mouseenter', () => {
+        hoverElement.style.opacity = '1';
+        hoverElement.style.visibility = 'visible';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        hoverElement.style.opacity = '0';
+        hoverElement.style.visibility = 'hidden';
+    });
+});
