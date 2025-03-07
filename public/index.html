@@ -15,10 +15,9 @@
     <!-- map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 
-
     <!-- Google font -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
     <!-- fontawesome -->
@@ -31,37 +30,75 @@
 <body>
     <header>
         <div class="inner">
-            <figure class="logo">Orange Travel</figure>
+            <div id="desk-menu">
+                <figure class="logo">Orange Travel</figure>
+                <ul id="desk-nav">
+                    <li><a class="menu-item" href="#">Home</a></li>
+                    <li><a class="menu-item" href="#popular">Popular places</a></li>
+                    <li><a class="menu-item" href="#map">Map</a></li>
+                </ul>
+            </div>
         </div>
-        <ul class="menu">
-            <li><a class="menu-item" href="#">Home</a></li>
-            <li><a class="menu-item" href="#popular">Popular places</a></li>
-            <li><a class="menu-item" href="#map">Map</a></li>
-        </ul>
-        <button class="hamburger">
-            <i class="menu-icon fa-solid fa-bars"></i>
-            <i class="close-icon fa-solid fa-xmark"></i>
-        </button>
+        <div id="mobile-menu">
+            <ul class="menu">
+                <li><a class="menu-item" href="#">Home</a></li>
+                <li><a class="menu-item" href="#popular">Popular places</a></li>
+                <li><a class="menu-item" href="#map">Map</a></li>
+            </ul>
+            <button class="hamburger">
+                <i class="menu-icon fa-solid fa-bars"></i>
+                <i class="close-icon fa-solid fa-xmark"></i>
+            </button>
+        </div>
     </header>
 
-    <section id="quick-search" class="inner">
-        <h2>Quick Search</h2>
-        <div>
-            <h3>Dates</h3>
-            <input class="date" id="start-date" type="text" placeholder="From" />
-            <input class="date" id="end-date" type="text" placeholder="To" />
-        </div>
-        <h3>Destination</h3>
-        <input class="destination" id="destination" type="text" placeholder="where">
-        <button id="search">Search</button>
-    </section>
+    <div id="under-header"></div>
 
-    <section id="hero">
-        <figure id="luggage"></figure>
-        <div>
-            <h1>Finishing your last semester?<br>
-                You deserve a <span class="animated-word">vacation!</span>
-            </h1>
+    <div id="hero">
+        <div class="div1" data-aos="fade-right" data-aos-delay="500"> </div>
+        <div class="div2" data-aos="fade-down" data-aos-delay="500"> </div>
+        <div class="div3" data-aos="fade-left" data-aos-delay="500"> </div>
+        <div class="div4" data-aos="fade-up" data-aos-delay="500"> </div>
+        <div class="div5" data-aos="zoom-in" data-aos-delay="1000">
+            <h2>Orange Autumn Sale!</h2>
+            <p>Sep 1 - Nov 30</p>
+        </div>
+    </div>
+
+    <div class="desk-wrap">
+        <section id="quick-search" class="inner">
+            <h2>Quick Search</h2>
+            <div>
+                <h3>Dates</h3>
+                <input class="date" id="start-date" type="text" placeholder="From" />
+                <input class="date" id="end-date" type="text" placeholder="To" />
+            </div>
+            <h3>Destination</h3>
+            <input class="destination" id="destination" type="text" placeholder="where">
+            <button id="search">Search</button>
+        </section>
+
+        <section id="hero-second">
+            <figure id="luggage"></figure>
+            <div>
+                <h1>Finishing your last semester?<br>
+                    You deserve a <span class="animated-word">vacation!</span>
+                </h1>
+            </div>
+        </section>
+    </div>
+
+    <section id="price" class="inner">
+        <h2 class="sec-title">Price</h2>
+        <div class="price-cards">
+            <div class="price-card" data-aos="fade-right" data-aos-delay="1000">
+                <h3>To Asia</h3>
+                <p class="price">$1000~</p>
+            </div>
+            <div class="price-card" data-aos="fade-left" data-aos-delay="1000">
+                <h3>To Canada</h3>
+                <p class="price">$300~</p>
+            </div>
         </div>
     </section>
 
@@ -107,14 +144,34 @@
     </section>
 
     <footer class="inner">
-        <nav>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-line"></i>
-        </nav>
-        Orange Travel Inc.
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <aside>
+            <figure class="logo">Orange Travel</figure>
+            <nav class="footer-nav">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-line"></i>
+            </nav>
+            <p>Orange Travel Inc.</p>
+        </aside>
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>

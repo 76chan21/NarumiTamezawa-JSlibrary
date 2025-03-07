@@ -1,3 +1,4 @@
+// burger menu
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menu-item");
 const hamburger = document.querySelector(".hamburger");
@@ -23,7 +24,6 @@ menuIcon.style.display = "block";
 
 
 // search bar
-
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".date").forEach((input) => {
         new Cleave(input, {
@@ -34,13 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Hero animation
+// Image animation
 window.onload = function () {
     anime({
         targets: '#luggage',
         translateX: [50, 0],
         opacity: [0, 1],
         duration: 3000,
+        delay: 4000,
         easing: 'easeOutExpo',
         begin: function () {
             console.log("Animation started!");
@@ -52,8 +53,8 @@ window.onload = function () {
     anime({
         targets: '.animated-word',
         opacity: [0, 1],
-        duration: 2000,
-        delay: 1000,
+        duration: 4000,
+        delay: 2000,
         easing: 'easeOutExpo',
     });
 };
